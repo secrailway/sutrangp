@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif; /* Sets the default font for the page */
+    display: flex; /* Flexbox layout for centering content */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    height: 100vh; /* Makes the body height fill the viewport */
+    margin: 0; /* Removes default margin */
+    background-image: url('4.jpg'); /* Sets background image */
+    background-size: cover; /* Ensures the background image covers the whole area */
+    background-position: center; /* Centers the background image */
+    position: relative; /* Allows positioning of child elements */
+    padding: 20px; /* Adds padding inside the body */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.674); /* Semi-transparent white background */
+    padding: 40px; /* Adds space inside the container */
+    border-radius: 8px; /* Rounds the corners of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the container */
+    position: relative; /* Allows absolute positioning within the container */
+}
+
+.top-right-image {
+    position: absolute; /* Position the image absolutely within the login container */
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    width: 30px; /* Set the size of the image */
+    height: auto; /* Maintain the aspect ratio */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.login-container h2 {
+    margin-bottom: 20px; /* Adds space below the heading */
+    text-align: center; /* Centers the heading text */
+    color: rgb(0, 47, 255); /* Sets the color of the heading text */
+    font-size: 28px; /* Adjusts the font size of the heading */
+    font-family: 'Georgia', serif; /* Changes the font style to Georgia */
+    font-weight: bold; /* Makes the heading text bold */
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    width: 100%; /* Makes the input fields take up the full width of the container */
+    padding: 10px; /* Adds padding inside the input fields */
+    margin-bottom: 20px; /* Adds space below the input fields */
+    border: 1px solid #ccc; /* Adds a light grey border around the input fields */
+    border-radius: 4px; /* Slightly rounds the corners of the input fields */
+    text-transform: uppercase; /* Converts all text input to uppercase */
+}
+
+.login-container button {
+    width: 100%; /* Makes the button take up the full width of the container */
+    padding: 10px; /* Adds padding inside the button */
+    background-color: #007BFF; /* Sets the button color to a blue shade */
+    color: white; /* Makes the button text white */
+    border: none; /* Removes the border from the button */
+    border-radius: 4px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect for the background color */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background-color: #0056b3; /* Darkens the button color when hovered */
+}
+
+#message {
+    text-align: center; /* Centers the message text */
+    margin-top: 20px; /* Adds space above the message */
+    font-weight: bold; /* Makes the message text bold */
+}
+
+.bilaspur-division {
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 12px; /* Text size */
+    color: rgba(0, 32, 174, 0.608); /* Text color */
+    position: absolute; /* Positioning relative to the login container */
+    bottom: 0px; /* Position it 10px from the bottom of the login container */
+    right: 0px; /* Position it 10px from the right side of the login container */
+    text-align: center; /* Center align the text */
+}

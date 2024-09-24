@@ -1,0 +1,164 @@
+/* Ensures the body is scrollable on all devices */
+html, body {
+    height: 100%; /* Full height for the body and html */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    position: relative;
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport height */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.329);
+    z-index: 1;
+}
+
+img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto 20px;
+    width: 15%; /* Adjusted for desktop view */
+    max-width: 100%;
+    height: auto;
+    filter: none;
+    opacity: 1;
+    border: none;
+    box-shadow: none;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 40px; /* Adjusted size for desktop view */
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    margin: 0px 0 5px 0;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    margin: 0px 0 5px 0;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h4 {
+    margin: 0px 0 5px 0;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 300px;
+}
+
+.flexbox {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flexbox:hover {
+    background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+ animation: slidernbw 5s linear infinite;
+ color: #000000;
+ 
+}
+@keyframes slidernbw {
+    to {
+     background-position: 20vw;
+    }
+   }
+
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    h2, h3, h4 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .flexbox {
+        padding: 20px;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    img {
+        width: 30%; /* Adjusted size for mobile view */
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}

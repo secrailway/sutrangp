@@ -1,0 +1,177 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f400;
+    margin: 0;
+    padding: 20px 0; /* Add top and bottom padding to the body */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align form at the top initially */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    background-image: url(15.jpg);
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #ffffffa5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: auto; /* Center the form horizontally */
+    position: relative;
+    margin-top: 20px; /* Ensure it's not too close to the top */
+}
+
+/* Logout button styling */
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Form title styling */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 0;
+    font-size: 30px;
+    font-family: 'Lora', serif;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Uniform font size for all input fields */
+    box-sizing: border-box;
+    text-transform: uppercase; /* Ensure text is always uppercase */
+}
+
+/* Read-only input fields */
+input[readonly] {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+/* Select field styling */
+select {
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Placeholder for LP and ALP names */
+#lp-name,
+#alp-name {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Ensure the time picker stays within the form container */
+.flatpickr-calendar {
+    z-index: 9999; /* Ensures the calendar dropdown appears above other elements */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    button[type="submit"] {
+        font-size: 14px; /* Consistent font size */
+        padding: 8px;
+    }
+}
+
+/* Welcome message styling */
+#welcome-message {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 14px;
+    color: #545353;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Spinner styling */
+#spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#spinner {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+}
+
+.bd {
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+    padding: 0px 10px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 12px; /* Text size */
+    color: rgba(0, 32, 174, 0.608); /* Text color */
+    position: absolute; /* Positioning relative to the login container */
+    bottom: 0px; /* Position it 10px from the bottom of the login container */
+    right: 0px; /* Position it 10px from the right side of the login container */
+    text-align: center; /* Center align the text */
+}
